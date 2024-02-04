@@ -37,7 +37,7 @@
 // FILE: main.js
 
 import { createApp } from 'vue'
-import { Quasar } from 'quasar'
+import { Quasar, Notify, Dialog } from 'quasar'
 
 // Import icon libraries
 import '@quasar/extras/roboto-font/roboto-font.css'
@@ -57,7 +57,10 @@ import App from './App.vue'
 const myApp = createApp(App)
 
 myApp.use(Quasar, {
-  plugins: {}, // import Quasar plugins and add here
+  plugins: { Notify, Dialog },
+  config: {
+    notify: {}
+  } // import Quasar plugins and add here
   /*
   config: {
     brand: {
